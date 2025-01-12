@@ -153,8 +153,7 @@ def main():
     st.sidebar.header("Загрузка данных")
     file = st.sidebar.file_uploader("Загрузите CSV-файл с данными о температуре (формат: timestamp, temp)", type=['csv'])
     api_key = st.sidebar.text_input("Введите API ключ для OpenWeatherMap", type="password")
-    city = st.sidebar.text_input("Введите название города для отображения текущей температуры", value="Moscow")
-
+    
     # Параметры скользящего среднего
     st.sidebar.header("Параметры анализа")
     window_size = st.sidebar.slider("Окно скользящего среднего (дни):", min_value=2, max_value=90, value=30, step=1)
